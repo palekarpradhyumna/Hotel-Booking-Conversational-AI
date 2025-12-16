@@ -1,0 +1,74 @@
+# Conversational Hotel Booking AI
+
+This project is a Conversational AI system that allows users to search and book hotels using natural language.  
+The AI collects user preferences such as city, date, room type, and budget, and fetches hotel data using an OpenAPI-based backend tool.
+
+## Features
+- Natural language hotel search
+- OpenAPI tool integration
+- Backend built with FastAPI
+- Clean JSON responses with proper data types
+- Tool-compatible schema for Conversational AI platforms
+- Real-time API testing using ngrok
+
+## Tech Stack
+- Python
+- FastAPI
+- OpenAPI 3.0
+- Conversational AI (Tool Calling)
+- HTTPX
+- Ngrok
+
+## Project Architecture
+User → Conversational AI → OpenAPI Tool → FastAPI Backend → Hotel Data
+
+## API Endpoints
+
+### Search Hotels
+POST /searchHotels
+
+Request Body
+{
+  "city": "Pune",
+  "date": "24/11/2025"
+}
+
+Response
+{
+  "hotels": [
+    {
+      "hotel_name": "Sunrise Hotel",
+      "city": "Pune",
+      "rooms": [
+        {
+          "type": "Deluxe",
+          "price": 4500
+        }
+      ]
+    }
+  ]
+}
+
+## How to Run
+
+1. Clone the repository
+2. Install dependencies
+   pip install -r requirements.txt
+3. Run backend server
+   uvicorn hotel_api:app --reload
+4. Expose API using ngrok
+   ngrok http 8000
+5. Update webhook URL in hotel_webhook_api.py
+
+## Use Case
+This project demonstrates how Conversational AI systems interact with external tools using structured schemas to perform real-world tasks like hotel booking.
+
+## Future Enhancements
+- User authentication
+- Payment integration
+- Ratings and reviews
+- Multi-city search
+- Booking confirmation flow
+
+## Author
+Pradyumna Palekar
