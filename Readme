@@ -2,7 +2,7 @@
 
 This project is a Conversational AI system that allows users to search and book hotels using natural language.  
 The AI collects user preferences such as city, date, room type, and budget, and fetches hotel data using an OpenAPI-based backend tool.
-
+loom Video: https://www.loom.com/share/7be61e58b09f45cd96f5b5ac13cbcc1d
 ## Features
 - Natural language hotel search
 - OpenAPI tool integration
